@@ -5,6 +5,7 @@ import java.util.List;
 
 
 @Entity
+
 public class Student {
 
 
@@ -24,8 +25,8 @@ public class Student {
     /**
      **/
 
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "student")
-    private List<Lesson> lesson;
+//    @OneToMany(cascade = CascadeType.ALL, mappedBy = "student")
+//    private List<Lesson> lesson;
     //Bir öğrenciye ait ders listesi içerisinde birden fazla ders olabilir..
     //Karşı taraftaki entityden ders listesi geleceği tanımlanıyor.
 
@@ -37,7 +38,7 @@ public class Student {
 
 
     public Student(int no, String adi, String soyadi, List<Lesson> lesson) {
-        this.lesson = lesson;
+//        this.lesson = lesson;
         this.no = no;
         this.adi = adi;
         this.soyadi = soyadi;
@@ -76,13 +77,13 @@ public class Student {
         this.student_id = student_id;
     }
 
-    public List<Lesson> getLesson() {
-        return lesson;
-    }
-
-    public void setLesson(List<Lesson> lesson) {
-        this.lesson = lesson;
-    }
+//    public List<Lesson> getLesson() {
+//        return lesson;
+//    }
+//
+//    public void setLesson(List<Lesson> lesson) {
+//        this.lesson = lesson;
+//    }
 
 
 }

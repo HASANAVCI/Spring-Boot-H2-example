@@ -4,11 +4,13 @@ import com.example.uygulama.model.Student;
 import com.example.uygulama.repository.StudentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;
 
 @Service
+
 
 public class StudentService {
 
@@ -27,7 +29,7 @@ public class StudentService {
     }
 
     //POST
-    public Student save(Student student) {
+    public Student saved(Student student) {
         return studentRepository.save(student);
     }
 
@@ -35,8 +37,6 @@ public class StudentService {
         return studentRepository.findOne(id);
     }
 
-    public List<Student> searchByHours(@RequestParam int hours) {
-        return studentRepository.findByHours(hours);
-    }
+
 }
 

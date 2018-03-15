@@ -11,5 +11,6 @@ import java.util.List;
 
 @Repository
 public interface LessonRepository extends JpaRepository<Lesson, Long> {
-
+    @Query("Select l.student from Lesson l where l.hours=:a")
+    List<Student> findByHours(@Param(value = "a") int hours);
 }

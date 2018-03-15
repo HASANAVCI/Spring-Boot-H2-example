@@ -27,4 +27,10 @@ public class LessonController {
     List<Lesson> lessons() {
         return lessonService.get();
     }
+
+
+    @GetMapping("/search/{hours}")
+    List<Student> search(@PathVariable int hours) {
+        return lessonService.searchByHours(hours);
+    }
 }

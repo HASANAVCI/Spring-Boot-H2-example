@@ -23,4 +23,7 @@ public class LessonService {
         return lessonRepository.findAll();
     }
 
+    public List<Student> searchByHours(@RequestParam int hours) {
+        return lessonRepository.findByHours(hours);
+    }
 }
